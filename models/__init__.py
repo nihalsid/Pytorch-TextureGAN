@@ -28,7 +28,7 @@ def save_network(model, network_label, epoch, iteration, args):
     }
 
     torch.save(model_state, save_path)
-    model.cuda(device_id=args.gpu)
+    model.cuda(device=args.gpu)
     print("Saved {0} at epoch: {1}, iter: {2}".format(network_label, epoch, iteration))
 
 
